@@ -1,0 +1,30 @@
+ip: 192.168.10.10
+memory: 2048
+cpus: 2
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: 'C:\Users\i\deployment'
+        to: /home/vagrant/deployer
+sites:
+    -
+        map: deployer.local
+        to: /home/vagrant/deployer/public
+databases:
+    - deployer
+features:
+    -
+        mysql: false
+    -
+        mariadb: false
+    -
+        postgresql: false
+    -
+        ohmyzsh: false
+    -
+        webdriver: false
+name: deployer
+hostname: deployer
